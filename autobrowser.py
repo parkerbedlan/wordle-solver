@@ -51,7 +51,7 @@ while True:
         guess = guesses[0]
         keyboard_capture.send_keys(Keys.BACKSPACE * 5)
       elif message and message.text.startswith('You lost!'):
-        driver.find_element(By.CLASS_NAME,'Game').screenshot('screenshots/lost%s.png' % game_number)
+        # driver.find_element(By.CLASS_NAME,'Game').screenshot('screenshots/lost%s.png' % game_number)
         game_number += 1
         keyboard_capture.send_keys(Keys.ENTER)
         break
@@ -72,7 +72,7 @@ while True:
         won = False
         break
     if won:
-      driver.find_element(By.CLASS_NAME,'Game').screenshot('screenshots/won%s.png' % game_number)
+      # driver.find_element(By.CLASS_NAME,'Game').screenshot('screenshots/won%s.png' % game_number)
       game_number += 1
       keyboard_capture.send_keys(Keys.ENTER)
       break
